@@ -7,6 +7,6 @@ for linenum, line in enumerate(sys.stdin):
 
         if len(line) >= 2:
             emp = line[0]
-            sal = line[2]
+            sec = line[1]
 
-            print(f'{emp}\t{sal}')
+            print(f'{emp}\t{sec}')

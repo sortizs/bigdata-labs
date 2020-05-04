@@ -1,17 +1,17 @@
 import sys
 
-sececon = {}
+empleados = {}
 
 for line in sys.stdin:
     line = line.strip()
-    sec, sal = line.split('\t')
+    emp, sal = line.split('\t')
 
-    if sec in sececon:
-        sececon[sec].append(int(sal))
+    if emp in empleados:
+        empleados[emp].append(int(sal))
     else:
-        sececon[sec] = []
-        sececon[sec].append(int(sal))
+        empleados[emp] = []
+        empleados[emp].append(int(sal))
 
-for sec in sececon.keys():
-    ave_sal = sum(sececon[sec])*1.0 / len(sececon[sec])
-    print(f'{sec}\t{ave_sal}')
+for emp in empleados.keys():
+    ave_sal = sum(empleados[emp])*1.0 / len(empleados[emp])
+    print(f'{emp}\t{ave_sal}')
